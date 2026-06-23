@@ -10,39 +10,29 @@ M_viz = int (f.readline ())
 M = int (f.readline ())
 shredded_M = int (f.readline ())
 
-x_viz = (f.readline ()).split ()
-y_viz = (f.readline ()).split ()
-
-x = (f.readline ()).split ()
-nm_derivative = (f.readline ()).split ()
-
-shredded_x = (f.readline ()).split ()
-shredded_nm_derivative = (f.readline ()).split ()
-
-updated_runge_solution = (f.readline ()).split ()
+x_viz = list (map (float, f.readline ()).split ())
+y_viz = list (map (float, f.readline ()).split ())
+x = list (map (float, f.readline ()).split ())
+nm_derivative = list (map (float, f.readline ()).split ())
+shredded_x = list (map (float, f.readline ().split ()))
+shredded_nm_derivative = list (map (float, f.readline ().split ()))
+updated_runge_solution = list (map (float, f.readline ().split ()))
 
 f.close ()
 
-for i in range (M_viz):
-       x_viz[i] = float (x_viz[i])
-       y_viz[i] = float (y_viz[i])
+fig, ax = plt.subplots (10, 6)                                                                         # create plot
+ax.plot (x_viz, y_viz, linewidth=2, label="Analytical derivative", color="black")                                           # draw f'(x)
+ax.plot (x, nm_derivative, "o", markersize=6, color="green", label="Numerical, h")
+ax.plot (shredded_x, shredded_nm_derivative, "o", markersize=6, color="red", label="Numerical, h/2")
+ax.plot (x, updated_runge_solution, "o", markersize=6, color="blue", label="Runge-improved")
 
-for i in range (M):
-       x[i] = float (x[i])
-       nm_derivative[i] = float (nm_derivative[i])
-       updated_runge_solution[i] = float (updated_runge_solution[i])
+ax.set_xlabel ("x", fontsize=12)
+ax.set_ylabel ("f'(x)", fontsize=12)
+ax.set_title ("Comparsion of Derivatives", fontsize=14)
+ax.grid (True, linestyle="--", alpha=0.6)
+ax.legend (loc="best")
 
-for i in range (shredded_M):
-       shredded_x[i] = float (shredded_x[i])
-       shredded_nm_derivative[i] = float (shredded_nm_derivative[i])
+plt.savefig ("plot.png", dpi=150, bbox_inches="tight")
+print ("Plot saved as plot.png")
 
-fig, ax = plt.subplots ()                                                                         # create plot
-ax.plot (x_viz, y_viz, linewidth = 1.5, label = "math")                                           # draw f'(x)
-ax.plot (x, nm_derivative, "o", color = 'green', label = "h")
-ax.plot (shredded_x, shredded_nm_derivative, "o", color = 'red', label = "0.5h")
-ax.plot (x, updated_runge_solution, "o", color = 'blue', label = "Runge")
-ax.legend ()                                                                                      # draw legend 
-
-ax.grid ()                                                                                        # draw grid
-
-plt.show ()                                                                                       # show the figure
+plt.show ()
