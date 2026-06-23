@@ -1,0 +1,27 @@
+# Скомпилированные объектные файлы и исполняемые
+*.o
+*.obj
+*.exe
+*.out
+numer_diff
+
+# Папки сборки
+build/
+bin/
+obj/
+
+# Файлы данных, генерируемые программой
+parameters.txt
+
+# Файлы Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Редакторы и IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+*.swo
