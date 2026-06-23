@@ -20,7 +20,7 @@ updated_runge_solution = list (map (float, f.readline ().split ()))
 
 f.close ()
 
-fig, ax = plt.subplots (10, 6)                                                                         # create plot
+fig, ax = plt.subplots (figsize=(10, 6))                                                                         # create plot
 ax.plot (x_viz, y_viz, linewidth=2, label="Analytical derivative", color="black")                                           # draw f'(x)
 ax.plot (x, nm_derivative, "o", markersize=6, color="green", label="Numerical, h")
 ax.plot (shredded_x, shredded_nm_derivative, "o", markersize=6, color="red", label="Numerical, h/2")
