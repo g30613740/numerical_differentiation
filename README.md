@@ -84,7 +84,7 @@ make clean
 ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 </pre>
 
-<p>After that, a window with the plot appears (see Results).</p>
+<p>After that, a window with the plot appears (see the picture above).</p>
 
 <h2>Results</h2>
 <p>The generated plot compares:</p>
@@ -94,10 +94,6 @@ make clean
   <li>Numerical derivative with step h/2 (red dots)</li>
   <li>Runge-improved solution (blue dots)</li>
 </ul>
-<p align="center">
-  <img src="plot.png" alt="Plot of derivatives" width="600"/>
-</p>
-<p><em>(PASTE THE PLOT!)</em></p>
 
 <h2>Project Structure</h2>
 <pre>

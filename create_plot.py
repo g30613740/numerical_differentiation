@@ -28,7 +28,7 @@ ax.plot (x, updated_runge_solution, "o", markersize=6, color="blue", label="Rung
 
 ax.set_xlabel ("x", fontsize=12)
 ax.set_ylabel ("f'(x)", fontsize=12)
-ax.set_title ("Comparsion of Derivatives", fontsize=14)
+ax.set_title ("Comparison of Derivatives", fontsize=14)
 ax.grid (True, linestyle="--", alpha=0.6)
 ax.legend (loc="best")
 
