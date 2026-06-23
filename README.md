@@ -41,7 +41,7 @@ The program will:
 <ol>
   <li>Print two error tables to the console.</li>
   <li>Generate parameters.txt with all data.</li>
-  <li>Launch create_plot.py to show a graph comparing analytical and numerical derivatives.</li>
+  <li>Launch create_plot.py to show a graph and save it as plot.png.</li>
 </ol>
 </p>
 
